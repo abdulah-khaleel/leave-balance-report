@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+ak_leave_balance_report.access_leave_balance_report,access_leave_balance_report,ak_leave_balance_report.model_leave_balance_report,base.group_user,1,1,0,0

@@ -21,9 +21,8 @@
     'version': '15.0.0.0',
     'depends': ['base','hr_holidays'],
     'data': [
-        # 'security/ir.model.access.csv',
-        # 'views/carryover_views.xml',
-        # 'views/hr_leave_allocation_views.xml',
+        'security/ir.model.access.csv',
+        'views/leave_balance_report.xml',
     ],
     # 'images': ["static/description/banner.png"],
     'license': 'LGPL-3',

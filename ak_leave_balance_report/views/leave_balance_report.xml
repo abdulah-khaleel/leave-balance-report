@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+ 
+    <record id="leave_balance_report_list_view" model="ir.ui.view">
+        <field name="name">leave.balance.report.list.view</field>
+        <field name="model">leave.balance.report</field>
+        <field name="arch" type="xml">
+            <tree string="Time Off Balance Report">
+                <field name="employee_id"/>
+                <field name="job_id"/>
+                <field name="department_id"/>
+                <field name="leave_type_id"/>
+                <field name="allocated_days"/>
+                <field name="taken_days"/>
+                <field name="balance_days"/>
+                <field name="utilization_rate" widget="percentage"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_leave_balance_report_filter" model="ir.ui.view">
+        <field name="name">view.leave.balance.report.filter</field>
+        <field name="model">leave.balance.report</field>
+        <field name="arch" type="xml">
+            <search string="Search Time Off Balances">
+                <field name="employee_id"/>
+                <field name="leave_type_id"/>
+                <field name="department_id"/>
+                <separator/>
+                <group expand="0" string="Group By">
+                    <filter name="group_by_employee" string="Employee" context="{'group_by':'employee_id'}"/>
+                    <filter name="group_by_leave_type" string="Time Off Type" context="{'group_by':'leave_type_id'}"/>
+                    <filter name="group_by_department" string="Department" context="{'group_by':'department_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+ 
+ 
+
+    <record id="server_action_time_off_balance_report" model="ir.actions.server">
+        <field name="name">Leave Balance Report X</field>
+        <field name="model_id" ref="ak_leave_balance_report.model_leave_balance_report"/>
+        <field name="binding_model_id" ref="hr_holidays.model_hr_leave"/>
+        <field name="state">code</field>
+        <field name="code">
+        action = model.action_leave_balance_report()
+        </field>
+    </record>
+
+    <menuitem
+    id="leave_balance_report_menu"
+    action="server_action_time_off_balance_report"
+    name="Time Off Balance Report"
+    parent="hr_holidays.menu_hr_holidays_report"
+    groups="hr_holidays.group_hr_holidays_user"
+    sequence="10"/>
+ 
+
+</odoo>
