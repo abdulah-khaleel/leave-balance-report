@@ -70,7 +70,7 @@ class LeaveBalanceReport(models.Model):
             'name': _('Time Off Balances'),
             'type': 'ir.actions.act_window',
             'res_model': 'leave.balance.report',
-            'view_mode': 'tree',
+            'view_mode': 'tree,graph,pivot',
             'context': {
                'search_default_group_by_employee': True,
             }

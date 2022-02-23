@@ -35,6 +35,26 @@
             </search>
         </field>
     </record>
+
+    <record id="view_leave_balance_report_graph" model="ir.ui.view">
+        <field name="model">leave.balance.report</field>
+        <field name="arch" type="xml">
+            <graph type="bar">
+                <field name="employee_id"/>
+                <field name="balance_days"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="view_leave_balance_report_pivot" model="ir.ui.view">
+        <field name="model">leave.balance.report</field>
+        <field name="arch" type="xml">
+            <pivot>
+                <field name="employee_id" type="row"/>
+                <field name="leave_type_id" type="col"/>
+            </pivot>
+        </field>
+    </record>
  
  
 
