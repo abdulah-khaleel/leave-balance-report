@@ -22,7 +22,7 @@
         <field name="name">view.leave.balance.report.filter</field>
         <field name="model">leave.balance.report</field>
         <field name="arch" type="xml">
-            <search string="Search Time Off Balances">
+            <search string="Search Time Off">
                 <field name="employee_id"/>
                 <field name="leave_type_id"/>
                 <field name="department_id"/>

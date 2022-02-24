@@ -10,7 +10,7 @@
 ################################################################################# 
 
 {
-    'name': "Time Off Balance Report",   
+    'name': "Time Off Utilization Report",   
     'summary': "A time off utilization report.",   
     'description': """
         A summary time off balance and utilization report for employees. 
