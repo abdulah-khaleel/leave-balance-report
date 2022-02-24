@@ -5,7 +5,7 @@ from odoo import models, fields, api, _
 
 class LeaveBalanceReport(models.Model):
     _name = 'leave.balance.report'
-    _description = 'Leave Balance Report'
+    _description = 'Time Off Utilization Report'
 
     employee_id = fields.Many2one('hr.employee', string="Employee")
     job_id = fields.Many2one('hr.job', string="Job", related='employee_id.job_id', readonly=True)
@@ -67,7 +67,7 @@ class LeaveBalanceReport(models.Model):
                 })
 
         return {
-            'name': _('Time Off Balances'),
+            'name': _('Time Off Utilization'),
             'type': 'ir.actions.act_window',
             'res_model': 'leave.balance.report',
             'view_mode': 'tree,graph,pivot',

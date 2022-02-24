@@ -41,7 +41,6 @@
         <field name="arch" type="xml">
             <graph type="bar">
                 <field name="employee_id"/>
-                <field name="balance_days"/>
             </graph>
         </field>
     </record>
@@ -55,11 +54,9 @@
             </pivot>
         </field>
     </record>
- 
- 
-
+  
     <record id="server_action_time_off_balance_report" model="ir.actions.server">
-        <field name="name">Leave Balance Report X</field>
+        <field name="name">Time Off Utilization</field>
         <field name="model_id" ref="ak_leave_balance_report.model_leave_balance_report"/>
         <field name="binding_model_id" ref="hr_holidays.model_hr_leave"/>
         <field name="state">code</field>
@@ -71,7 +68,7 @@
     <menuitem
     id="leave_balance_report_menu"
     action="server_action_time_off_balance_report"
-    name="Time Off Balance Report"
+    name="Utilization Report"
     parent="hr_holidays.menu_hr_holidays_report"
     groups="hr_holidays.group_hr_holidays_user"
     sequence="10"/>

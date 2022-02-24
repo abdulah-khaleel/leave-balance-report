@@ -1,4 +1,4 @@
-Time Off Leave Report for Odoo
+Time Off Utilization Report for Odoo
 
 License: General Public License, Version 3 (LGPL v3).
 Author and maintainer: Abdullah Khalil (abdulah.khaleel@gmail.com).

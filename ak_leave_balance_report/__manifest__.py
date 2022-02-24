@@ -11,9 +11,9 @@
 
 {
     'name': "Time Off Balance Report",   
-    'summary': "A time off balance report for employees.",   
+    'summary': "A time off utilization report.",   
     'description': """
-        A detailed time off balance report for employees. 
+        A summary time off balance and utilization report for employees. 
     """,   
     'author': "Abdullah Khalil",
     'website': "https://github.com/abdulah-khaleel",
@@ -24,7 +24,7 @@
         'security/ir.model.access.csv',
         'views/leave_balance_report.xml',
     ],
-    # 'images': ["static/description/banner.png"],
+    'images': ["static/description/banner-v15.png"],
     'license': 'LGPL-3',
     'application': True,
     'installable': True,
