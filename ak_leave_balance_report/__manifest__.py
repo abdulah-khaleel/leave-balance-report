@@ -19,6 +19,7 @@
     'website': "https://github.com/abdulah-khaleel",
     'category': 'Time Off',
     'version': '15.0.0.0',
+     "license": "LGPL-3",
     'depends': ['base','hr_holidays'],
     'data': [
         'security/ir.model.access.csv',
